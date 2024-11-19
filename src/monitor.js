@@ -1,6 +1,6 @@
-const axios = require('axios');
-const { sendNoitification } = require('./notification');
-const{ walletAdrress, heliusApiKey } = require('./config');
+import axios from ('axios');
+import { sendNoitification } from ('./notification');
+import { walletAddress, heliusApiKey } from ('./config');
 
 const API_URL = 'https://api.helius.dev/v0/addresses/${walletAddress}/transactions';
 
@@ -21,4 +21,4 @@ async function monitorTransactions() {
     }
 }    
 
-module.exports = { monitorTransactions };
+export { monitorTransactions };

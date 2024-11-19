@@ -1,8 +1,8 @@
-const nodemailer = require('nodemailer');
-const { email } = require('./config');
+import nodemailer from ('nodemailer');
+import { email } from './config';
 
 async function sendNotification(transaction) {
-const transportr = nodemailer.createTransport({
+const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
         user: email.user,
@@ -25,4 +25,4 @@ try {
 }
 }
 
-module.exports = {sendNotification};
+export { sendNotification };
