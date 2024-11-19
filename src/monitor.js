@@ -1,5 +1,5 @@
 import axios from ('axios');
-import { sendNoitification } from ('./notification');
+import { sendNotification } from ('./notification');
 import { walletAddress, heliusApiKey } from ('./config');
 
 const API_URL = 'https://api.helius.dev/v0/addresses/${walletAddress}/transactions';
